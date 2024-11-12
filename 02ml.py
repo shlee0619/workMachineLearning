@@ -1,4 +1,4 @@
-# 01ml.py
+# 02ml.py
 
 import time
 import warnings
@@ -57,24 +57,11 @@ print()
 9   France  37.000000  67000.000000       Yes
 '''
 
-# 데이터학습 방정식 수학식, 데이터가 숫자일때 속도 빠름
-# 컴퓨터를 이용해서 학습이론 적용 CPU메모리의존때문에 문자열을 숫자변환
-
 # print() #df대신 X사용  X = df.loc[ : , 'Country':'Salary' ] 추출 
 # print(X['Country'].unique())
 
 print()
 print( sorted(X['Country'].unique()) )
-# 'France' = 0 , 'Germany' = 1, 'Spain' = 2 레이블인코딩대상  One-Hot-Encoding
-
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-from sklearn.compose import ColumnTransformer
-
-encoder = LabelEncoder() 
-
-
-
-
 
 
 print()
