@@ -25,22 +25,17 @@ print(df)
 print()
 print()
 
-#11-12-화요일
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-from sklearn.compose import ColumnTransformer
+#난방비, 소득금액, 외식비, 가족인원, 외식횟수, 난방온도
+#스케일 조정함수 StandardScaler, MinMaxScaler, MaxAbsSaler
+from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler, MaxAbsScaler
 
-print('0neHotEncoder처리 10:39')
-x = df.loc[ : , 'Country':'Salary']
-y = df['Purchased']
-
-
-encoder = LabelEncoder()
-x['Country'] = encoder.fit_transform(x['Country'])
-print(x)
+x = df.loc[:, 'Age':'Salary']
+ss_x = StandardScaler()
+print(ss_x.fit_transform(x))
 print()
 
+x = df.loc[:, 'Age':'Salary']
+mm_x = MinMaxScaler()
+print(mm_x.fit_transform(x))
 
-encoder_y = LabelEncoder()
-y = encoder_y.fit_transform(y)
-print(y)
-print()
+

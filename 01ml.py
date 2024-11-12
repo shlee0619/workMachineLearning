@@ -33,7 +33,7 @@ print()
 print('- ' * 55)
 print()
 
-print(df.describe()) #갯수, 최대,최소,편차, 1사분기
+print(df.describe()) #개수, 최대,최소,편차, 1사분기
 print()
 
 print(df.info()) #필드정보
