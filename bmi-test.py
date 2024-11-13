@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-tbl = pd.read_csv('bmi.csv')
+tbl = pd.read_csv('bmi_no_spaces.csv')
 label = tbl["label"]
 w = tbl["weight"]/100
 h = tbl["height"]/200
