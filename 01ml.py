@@ -9,6 +9,10 @@ from matplotlib import rc ,  font_manager
 font_name = font_manager.FontProperties(fname='c:/windows/Fonts/malgun.ttf').get_name()
 rc('font', family=font_name)
 
+import matplotlib as mpl 
+mpl.rc('axes', unicode_minus=False)
+mpl.rcParams['axes.unicode_minus'] = False
+
 import numpy as np
 import pandas as pd
 #---------------------------------------------------------------------------------------------
@@ -61,7 +65,7 @@ print( )
 
 print(df['Country'].unique() )
 print( )
-print('점심식사후 5교시 2:26')
+print()
 print('🎄 ' * 30 )
 
 #문제2 결측값 데이터 필드별 결측값 NAN 몇건 
